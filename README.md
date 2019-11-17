@@ -5,12 +5,12 @@ Add the xprop.jar to your project and import the br.com.analisasoftware.xprop.XP
 Calling the method XProp.xmlToProperties, you can get a Properties variable with the result of the XML's convertion.
 Ex.: 
 
-public class Test {
-  public static void main(String args[]){
-    Properties properties = XProp.xmlToProperties("<customer><id>1</id><name>David</name></customer>");
-    System.out.println(properties);
-  }
-}
+public class Test {<br/>
+  public static void main(String args[]){<br/>
+    Properties properties = XProp.xmlToProperties("&lt;customer&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;David&lt;/name&gt;&lt;/customer&gt;");
+<br/>    System.out.println(properties);<br/>
+  }<br/>
+}<br/>
 
 The result:
 
@@ -19,22 +19,22 @@ The result:
 You can also convert from a XML file.
 
 Ex.:
-public class Test {
+public class Test {<br/>
   public static void main(String args[]){
-    Properties properties = XProp.xmlToProperties(XProp.loadFromFile("/home/david/xmlFile.xml"));
-    System.out.println(properties);
-  }
+<br/>    Properties properties = XProp.xmlToProperties(XProp.loadFromFile("/home/david/xmlFile.xml"));
+<br/>    System.out.println(properties);
+  }<br/>
 }
-
+<br/>
 You can save the result to a Properties file.
 
 Ex.:
-public class Test {
+public class Test {<br/>
   public static void main(String args[]){
-    Properties properties = XProp.xmlToProperties(XProp.loadFromFile("/home/david/xmlFile.xml"));
-    XProp.saveToFile("/home/david/propertiesFile.properties", properties);
-  }
-}
+<br/>    Properties properties = XProp.xmlToProperties(XProp.loadFromFile("/home/david/xmlFile.xml"));
+<br/>    XProp.saveToFile("/home/david/propertiesFile.properties", properties);
+  }<br/>
+}<br/>
 
 
 
